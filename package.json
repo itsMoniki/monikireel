@@ -1,0 +1,12 @@
+{
+  "name": "moniki-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MONIKI portfolio static site for Hostinger",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
