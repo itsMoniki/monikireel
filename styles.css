@@ -37,3 +37,9 @@ nav,.hero-copy,.scroll-note { position:relative; z-index:1; } nav { display:flex
   body.bgg-page .bgg-hero-veil { background:linear-gradient(90deg,#07122b 0%,rgba(7,18,43,.98) 29%,rgba(7,18,43,.68) 52%,rgba(7,18,43,.08) 87%),linear-gradient(0deg,rgba(7,18,43,.96),transparent 58%); }
   body.bgg-page .bgg-hero-copy { max-width:min(57vw,760px); }
 }
+
+/* Main MONIKI hero: retain the full portrait on desktop, as on mobile. */
+@media (min-width:701px) {
+  .hero-image { object-fit:contain; object-position:58% center; background:#050507; }
+  .hero-shade { background:radial-gradient(ellipse 60% 74% at 62% 27%,rgba(130,53,87,.18),transparent 68%),linear-gradient(90deg,rgba(11,8,12,.72),rgba(11,8,12,.06) 75%),linear-gradient(0deg,var(--ink) 0%,rgba(16,13,18,.22) 38%,transparent 70%); }
+}
