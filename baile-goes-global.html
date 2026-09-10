@@ -116,3 +116,20 @@
     </script>
   </body>
 </html>
+<script>
+(function () {
+  var dateNode = document.getElementById("next-date");
+  var weekdayNode = document.getElementById("next-weekday");
+  if (!dateNode || !weekdayNode) return;
+  var parts = new Intl.DateTimeFormat("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit" }).formatToParts(new Date());
+  var values = {};
+  parts.forEach(function (part) { if (part.type !== "literal") values[part.type] = part.value; });
+  var today = Date.UTC(Number(values.year), Number(values.month) - 1, Number(values.day));
+  var firstEdition = Date.UTC(2026, 8, 17);
+  var cycle = 14 * 24 * 60 * 60 * 1000;
+  var edition = today <= firstEdition ? firstEdition : firstEdition + Math.ceil((today - firstEdition) / cycle) * cycle;
+  var next = new Date(edition);
+  dateNode.textContent = new Intl.DateTimeFormat("en-US", { timeZone: "UTC", month: "long", day: "numeric" }).format(next).toUpperCase();
+  weekdayNode.textContent = new Intl.DateTimeFormat("en-US", { timeZone: "UTC", weekday: "long" }).format(next).toUpperCase();
+}());
+</script>
