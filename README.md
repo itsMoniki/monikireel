@@ -1,6 +1,6 @@
 # MONIKI
 
-Static staging site for MONIKI — DJ, Creative Director, and Founder.
+Static staging site for MONIKI: DJ, Creative Director, and Founder.
 
 ## Local preview
 
