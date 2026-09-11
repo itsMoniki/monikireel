@@ -87,6 +87,14 @@
       .bgg-nav .bgg-back { display:inline-flex; align-items:center; min-height:34px; margin:-8px auto -8px -10px; padding:0 11px; border:1px solid rgba(242,238,231,.25); border-radius:999px; background:rgba(4,13,33,.88); box-shadow:0 8px 24px rgba(0,0,0,.16); }
       .bgg-hero-copy { position:static; }
       .bgg-stamp { position:absolute; z-index:2; top:86px; left:5vw; width:94px; margin:0; opacity:.72; }
+
+      /* Keep the wider layout as calm and spaced as the mobile composition. */
+      @media (min-width:761px) {
+        .bgg-hero-copy { position:relative; z-index:3; max-width:700px; }
+        .bgg-stamp { top:-128px; left:0; width:96px; }
+        .bgg-hero h1 { max-width:720px; font-size:clamp(58px,7.2vw,112px); }
+        .bgg-hero-line { margin:28px 0; }
+      }
     </style>
   </head>
   <body class="bgg-page">
