@@ -57,3 +57,20 @@ nav,.hero-copy,.scroll-note { position:relative; z-index:1; } nav { display:flex
     mask-image:linear-gradient(90deg,transparent 0%,transparent 14%,rgba(0,0,0,.25) 31%,#000 56%,#000 100%);
   }
 }
+
+/* Desktop practice image: full-bleed treatment with layered dusk so there is no visible image edge. */
+@media (min-width:701px) {
+  .intro { background:var(--ink); }
+  .intro::before {
+    inset:0;
+    background:url("moniki-practice-decks.png") center 52% / cover no-repeat;
+    filter:saturate(.76) brightness(.62);
+    opacity:.78;
+    -webkit-mask-image:none;
+    mask-image:none;
+  }
+  .intro::after {
+    content:""; position:absolute; inset:0; z-index:0; pointer-events:none;
+    background:linear-gradient(90deg,var(--ink) 0%,rgba(16,13,18,.96) 18%,rgba(22,12,20,.64) 51%,rgba(16,13,18,.70) 100%),linear-gradient(0deg,var(--ink) 0%,rgba(16,13,18,.36) 38%,rgba(16,13,18,.12) 100%),radial-gradient(ellipse 42% 88% at 11% 30%,rgba(132,55,89,.25),transparent 74%);
+  }
+}
