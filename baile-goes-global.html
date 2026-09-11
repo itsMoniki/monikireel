@@ -82,6 +82,11 @@
       .bgg-signup button { border:0; background:transparent; color:#123f9a; font:10px "DM Mono",monospace; cursor:pointer; }
       .bgg-footer { padding:35px 5vw; display:flex; justify-content:space-between; gap:20px; background:#07122b; color:#f2eee7; font:10px "DM Mono",monospace; letter-spacing:.08em; }
       @media (max-width:760px) { .bgg-hero { min-height:760px; padding:0 6vw 7vh; } .bgg-hero-image { object-position:50% 42%; } .bgg-hero-veil { background:linear-gradient(0deg,rgba(4,13,33,.98),rgba(4,13,33,.04) 85%); } .bgg-nav { padding:20px 6vw; gap:13px; } .bgg-nav a:last-child { display:none; } .bgg-about,.bgg-night,.bgg-passport-top { display:block; padding:85px 6vw; } .bgg-about-title { margin:25px 0 0; } .bgg-about-copy { padding-top:32px; } .bgg-sound,.bgg-residents,.bgg-room { padding:85px 6vw; } .bgg-listen-card,.bgg-recap,.bgg-resident-grid { grid-template-columns:1fr; gap:28px; } .bgg-mixtape { grid-template-columns:1fr; } .bgg-night { min-height:0; background:linear-gradient(0deg,rgba(5,14,34,.97),rgba(5,14,34,.45)),url("bgg-booth.jpg") center top/cover no-repeat,#0a1531; } .bgg-passport-grid { grid-template-columns:1fr; } .bgg-passed { display:block; margin-top:55px; } .bgg-passed div { margin-top:25px; } .bgg-gallery { grid-template-columns:1fr 1fr; } .bgg-gallery img { height:250px; } .bgg-gallery img:first-child { grid-column:span 2; } .bgg-travel,.bgg-follow { padding:85px 6vw; } .bgg-contact-fields { display:block; } .bgg-footer { display:block; padding:27px 6vw; } }
+      /* Separate the MONIKI navigation from the BGG stamp. */
+      .bgg-nav { z-index:4; }
+      .bgg-nav .bgg-back { display:inline-flex; align-items:center; min-height:34px; margin:-8px auto -8px -10px; padding:0 11px; border:1px solid rgba(242,238,231,.25); border-radius:999px; background:rgba(4,13,33,.88); box-shadow:0 8px 24px rgba(0,0,0,.16); }
+      .bgg-hero-copy { position:static; }
+      .bgg-stamp { position:absolute; z-index:2; top:86px; left:5vw; width:94px; margin:0; opacity:.72; }
     </style>
   </head>
   <body class="bgg-page">
