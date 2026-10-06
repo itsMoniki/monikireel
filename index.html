@@ -78,3 +78,15 @@
 .platform > .eyebrow, .platform > h2, .platform > .arrow { position: relative; z-index: 1; }
 @media (max-width: 700px) { .platform.baile::after, .platform.better::after { width: 66%; height: 66%; opacity: .78; } }
 </style>
+
+<style>
+/* Equal circular platform marks with the card names held clear at bottom-left */
+.platform { position: relative; }
+.platform.baile::after, .platform.better::after { z-index: 0 !important; inset: 12% 8% auto auto !important; margin: 0 !important; width: 34% !important; height: auto !important; aspect-ratio: 1 / 1 !important; clip-path: circle(50%) !important; background-position: center !important; background-repeat: no-repeat !important; opacity: .96 !important; }
+.platform.baile::after { background-size: 100% 100% !important; }
+.platform.better::after { background-size: 168% 168% !important; }
+.platform > .eyebrow { position: absolute !important; top: 7% !important; left: 7% !important; z-index: 1 !important; }
+.platform > h2 { position: absolute !important; left: 7% !important; bottom: 12% !important; z-index: 1 !important; margin: 0 !important; max-width: 78% !important; font-size: clamp(2.7rem, 3.6vw, 4.75rem) !important; line-height: .87 !important; text-shadow: 0 2px 18px rgba(0,0,0,.48); }
+.platform > .arrow { position: absolute !important; right: 7% !important; bottom: 8% !important; z-index: 1 !important; }
+@media (max-width: 700px) { .platform.baile::after, .platform.better::after { inset: 13% 8% auto auto !important; width: 35% !important; } .platform > h2 { bottom: 11% !important; max-width: 85% !important; font-size: clamp(2.65rem, 12vw, 4.5rem) !important; } }
+</style>
