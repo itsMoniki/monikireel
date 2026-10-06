@@ -65,3 +65,16 @@
 <style>
 @media (min-width:701px) { body .hero-image { left: 33.5% !important; right: auto !important; width: 39% !important; object-position: center !important; -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.26) 12%, #000 32%, #000 68%, rgba(0,0,0,.26) 88%, transparent 100%) !important; mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.26) 12%, #000 32%, #000 68%, rgba(0,0,0,.26) 88%, transparent 100%) !important; } }
 </style>
+
+<style>
+/* Platform logo cards */
+.platform { position: relative; isolation: isolate; overflow: hidden; background-image: none !important; }
+.platform.baile { background: radial-gradient(circle at 68% 42%, rgba(25,66,181,.34), transparent 42%), linear-gradient(135deg, #050817, #071b57) !important; }
+.platform.better { background: radial-gradient(circle at 72% 42%, rgba(53,110,65,.38), transparent 42%), linear-gradient(135deg, #07150d, #102719) !important; }
+.platform::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, rgba(4,5,10,.18), rgba(4,5,10,.02)); }
+.platform.baile::after, .platform.better::after { content: ''; position: absolute; inset: 0; z-index: -1; margin: auto; width: 58%; height: 58%; background-position: center; background-repeat: no-repeat; background-size: contain; filter: saturate(.88) contrast(1.08); opacity: .94; }
+.platform.baile::after { background-image: url('0CFB4A52-1874-4CF6-BE24-C62A8EBAE470_1_105_c.jpeg'); clip-path: circle(46%); }
+.platform.better::after { background-image: url('IMG_0182.jpg'); clip-path: circle(43%); }
+.platform > .eyebrow, .platform > h2, .platform > .arrow { position: relative; z-index: 1; }
+@media (max-width: 700px) { .platform.baile::after, .platform.better::after { width: 66%; height: 66%; opacity: .78; } }
+</style>
